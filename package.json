@@ -1,0 +1,15 @@
+{
+  "name": "flowd-cogmq",
+  "version": "1.0.0",
+  "description": "FlowD RabbitMQ RPC Server and Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "git@github.com:djansyle/flowd-cogmq.git",
+  "author": "djansyle",
+  "license": "MIT",
+  "dependencies": {
+    "cogmq": "^1.0.1"
+  }
+}
