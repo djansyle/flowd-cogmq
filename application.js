@@ -9,7 +9,7 @@ module.exports = class Application {
       return ;
     }
 
-    this.server = new cogmq.Server();
+    this.server = new cogmq.Server(this.options);
     assert(typeof options === 'object');
   }
 
