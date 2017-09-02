@@ -1,6 +1,6 @@
 {
   "name": "flowd-cogmq",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "FlowD RabbitMQ RPC Server and Application",
   "main": "index.js",
   "scripts": {

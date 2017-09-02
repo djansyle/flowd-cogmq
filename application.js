@@ -6,7 +6,6 @@ module.exports = class Application {
     this.options = options;
     if (typeof options === 'string') {
       this.options = { queue: options };
-      return ;
     }
 
     this.server = new cogmq.Server(this.options);
@@ -21,7 +20,11 @@ module.exports = class Application {
         if (!this[action]) {
           throw new Error(`No ${action} method found in ${this.constructor.name}.`);
         }
-        return this[action](msg.content);
+        if (!Array.isArray(msg.content)) {
+          throw new Error(`Expecting arguments to be an array instead got ${typeof msg.content}.`);
+        }
+
+        return this[action].apply(this, msg.content);
       });
     }
   }
